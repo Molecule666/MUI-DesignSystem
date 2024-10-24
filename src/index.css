@@ -1,13 +1,136 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+::-webkit-scrollbar {
+    display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Fonts */
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 100;
+    src: url("../public/fonts/otf/YekanBakh-Thin.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-Thin.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-Thin.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-Thin.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../public/fonts/otf/YekanBakh-Light.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-Light.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-Light.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../public/fonts/otf/YekanBakh-Regular.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-Regular.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-Regular.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../public/fonts/otf/YekanBakh-SemiBold.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-SemiBold.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-SemiBold.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../public/fonts/otf/YekanBakh-Bold.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-Bold.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-Bold.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 800;
+    src: url("../public/fonts/otf/YekanBakh-ExtraBold.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-ExtraBold.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-ExtraBold.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 900;
+    src: url("../public/fonts/otf/YekanBakh-Black.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-Black.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-Black.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-Black.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 950;
+    src: url("../public/fonts/otf/YekanBakh-ExtraBlack.otf") format("otf"),
+        url("../public/fonts/ttf/YekanBakh-ExtraBlack.ttf") format("truetype"),
+        url("../public/fonts/woff/YekanBakh-ExtraBlack.woff") format("woff"),
+        url("../public/fonts/woff2/YekanBakh-ExtraBlack.woff2") format("woff2");
+}
+
+/* input autoFill bg color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* -webkit-box-shadow: 0 0 0 100px rgb(169 174 178 / 2%) inset !important; */
+    border-left: 8px solid rgb(169 174 178 / 2%);
+    padding: 0px 5px;
+}
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+transition: background-color 9999s ease-in-out 0s;
+} */
+/* input:-webkit-autofill {
+  -webkit-text-fill-color: #b4b4b4 !important;
+} */
+/* .MuiTooltip-tooltip {
+  padding: 8px !important;
+  font-size: 1.3rem !important;
+  margin-bottom: 5px !important;
+  color: black !important;
+} */
+
+#container {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    overflow: hidden;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+.panel {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #555;
+    box-sizing: border-box;
+}
+.text-center {
+    text-align: center;
+}
+/* #box-widget-icon:{
+  float: 'left';
+} */
