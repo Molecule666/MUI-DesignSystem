@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MuiProvider from "theme/provider";
+import "./App.css";
+import AppRoute from "routes/app.route";
+
+export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const themeMode = localStorage.getItem("paletteMode") as "light" | "dark";
+
+    const [mode, setMode] = React.useState<"light" | "dark">(!!themeMode ? themeMode : "light");
+
+    const colorMode = React.useMemo(
+        () => ({
+            toggleColorMode: () => {
+                setMode((prevMode) => {
+                    const mode = prevMode === "light" ? "dark" : "light";
+                    localStorage.setItem("paletteMode", mode);
+                    return mode;
+                });
+            },
+        }),
+        []
+    );
+
+    return (
+        <ColorModeContext.Provider value={colorMode}>
+            <MuiProvider direction={"rtl"} mode={mode}>
+                <AppRoute />
+            </MuiProvider>
+        </ColorModeContext.Provider>
+    );
 }
 
 export default App;
