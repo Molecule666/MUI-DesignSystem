@@ -6,6 +6,7 @@ import { InputKit } from "components/kit/Input";
 import { ColorModeContext } from "App";
 import { CheckboxKit } from "components/kit/Checkbox";
 import CheckBoxView from "views/kit/checkboxVeiw";
+import { ChipKit } from "components/kit/Chip";
 
 const KitView = () => {
     const theme = useTheme();
@@ -295,6 +296,32 @@ const KitView = () => {
                     </Box>
                     <Box>
                         <CheckBoxView />
+                    </Box>
+                </Grid>
+                <Grid size={6} border={1} borderRadius={2} p={1}>
+                    <Box my={3}>
+                        <Typography variant="h1">{"chips"}</Typography>
+                        <Divider sx={{ my: 2 }} />
+                    </Box>
+                    <Box>
+                        <ChipKit label="حافظ" colors="primary" />
+                        <ChipKit label="حافظ" colors="primary" onClick={() => {}} />
+                        <ChipKit label="حافظ" colors="primary" onDelete={() => {}} />
+
+                        <ChipKit label="حافظ" variant={"outlined"} color={"secondary"} />
+                        <ChipKit label="حافظ" variant={"outlined"} onClick={() => {}} />
+
+                        <ChipKit
+                            label="چاوش سرزمین هوشمند ایرانیان پ"
+                            variant={"outlined"}
+                            onDelete={() => {}}
+                        />
+
+                        {/*
+                        <ChipKit label="Deletable" variant={"outlined"} onDelete={() => {}} />
+
+                        <ChipKit label="حافظ" disabled />
+                        <ChipKit label="حافظ" variant={"outlined"} disabled /> */}
                     </Box>
                 </Grid>
             </Grid>

@@ -158,6 +158,9 @@ const theme: ThemeOptions = {
                 },
             },
         },
+        MuiChip: {
+            defaultProps: {},
+        },
         MuiRadio: {
             defaultProps: {
                 sx: {
