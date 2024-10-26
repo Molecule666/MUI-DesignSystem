@@ -161,6 +161,13 @@ const theme: ThemeOptions = {
         MuiChip: {
             defaultProps: {},
         },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    borderColor: 'divider'
+                }
+            }
+        },
         MuiRadio: {
             defaultProps: {
                 sx: {
