@@ -377,6 +377,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                       paper: "#ffffff",
                       default: "#f8f8f8",
                       tableOdd: "#f5f5f5",
+                      tooltip: "#526075",
                   },
                   text: {
                       primary: "#252B3D",
@@ -430,6 +431,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                       paper: "#141B27",
                       default: "#000203",
                       tableOdd: "#1e202e",
+                      tooltip: "#313745",
                   },
                   text: {
                       primary: "#ffffff",

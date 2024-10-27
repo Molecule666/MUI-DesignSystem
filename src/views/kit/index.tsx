@@ -7,6 +7,9 @@ import { ColorModeContext } from "App";
 import CheckBoxView from "views/kit/checkboxVeiw";
 import { ChipKit } from "components/kit/Chip";
 import DividerView from "./dividerView";
+import { TooltipKit } from "components/kit/Tooltip";
+import { DialogKit } from "components/kit/Dialog";
+import { MessageQuestionSvg } from "assets";
 
 const KitView = () => {
   const theme = useTheme();
@@ -342,6 +345,143 @@ const KitView = () => {
             <Divider sx={{ my: 2 }} />
             <Box>
               <DividerView />
+            </Box>
+          </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"Tooltip"}</Typography>
+            <Divider sx={{ my: 2 }} />
+            <Box display={"flex"} justifyContent={"space-around"}>
+              <TooltipKit title={"top"} placement="top">
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"single-top"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit title={"bottom"} placement="bottom">
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"single-bottom"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit title={"left"} placement="left">
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"single-left"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit title={"right"} placement="right">
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"single-right"}
+                </Typography>
+              </TooltipKit>
+            </Box>
+            <Box mt={8} display={"flex"} justifyContent={"space-around"}>
+              <TooltipKit
+                title={
+                  "Supporting text Body text string goes here psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+                placement="top"
+              >
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"multi line tooltip"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit
+                title={
+                  "Supporting text Body text string goes here psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+                placement="bottom"
+              >
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"multi line tooltip"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit
+                title={
+                  "Supporting text Body text string goes here psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+                placement="left"
+              >
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"multi line tooltip"}
+                </Typography>
+              </TooltipKit>
+              <TooltipKit
+                title={
+                  "Supporting text Body text string goes here psum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+                placement="right"
+              >
+                <Typography
+                  noWrap
+                  sx={{
+                    textAlign: "center !important",
+                    cursor: "pointer",
+                  }}
+                >
+                  {"multi line tooltip"}
+                </Typography>
+              </TooltipKit>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"Dialog"}</Typography>
+            <Divider sx={{ my: 2 }} />
+            <Box display={"flex"} justifyContent={"space-around"}>
+              <Box>
+                <DialogKit
+                  title="عنوان دیالوگ"
+                />
+              </Box>
+              <Box>
+                <DialogKit
+                  title="عنوان دیالوگ"
+                  svgIcon={<MessageQuestionSvg />}
+                />
+              </Box>
             </Box>
           </Box>
         </Grid>

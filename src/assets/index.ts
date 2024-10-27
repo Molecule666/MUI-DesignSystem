@@ -5,6 +5,8 @@ import { ReactComponent as CheckedIndeterminateErrorSvg } from "./svg/CheckedInd
 import { ReactComponent as CheckedTrueErrorSvg } from "./svg/CheckedTrueError.svg";
 import { ReactComponent as CloseSvg } from "./svg/close.svg";
 import { ReactComponent as CloseBlueSvg } from "./svg/CloseBlue.svg";
+import { ReactComponent as MessageQuestionSvg } from "./svg/message-question.svg";
+
 
 export {
     CheckedSvg,
@@ -13,5 +15,6 @@ export {
     CheckedIndeterminateSvg,
     CheckedIndeterminateErrorSvg,
     CloseSvg,
-    CloseBlueSvg
+    CloseBlueSvg,
+    MessageQuestionSvg
 };

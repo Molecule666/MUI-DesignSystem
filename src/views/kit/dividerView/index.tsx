@@ -30,10 +30,10 @@ const DividerView = () => {
         <Box width={50} height={50} bgcolor={"green"} mx={2} />
       </Box>
 
-      <Typography variant="h2" color="primary" mt={4}>
+      <Typography variant="h2" color="primary" mt={4} mx={2}>
         {"Horizontal"}
       </Typography>
-      <Box my={4} width={100}>
+      <Box my={4} width={100} mx={2}>
         <Box width={50} height={50} bgcolor={"red"} my={2} />
         <DividerKit component="li" />
         <Box width={50} height={50} bgcolor={"blue"} my={2} />
