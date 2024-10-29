@@ -343,36 +343,80 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             light: "#BBD3FF",
             dark: "#2947A6",
             contrastText: "#fff",
+            10: "#0A103D",
+            20: "#152A78",
+            30: "#2947A6",
+            40: "#3C61C6",
+            50: "#537FE7",
+            60: "#7CA2F0",
+            70: "#98BAF7",
+            80: "#BBD3FF",
+            90: "#D8E7FF",
+            95: "#E9F2FF",
+            99: "#F4F9FF"
           },
           secondary: {
             main: "#09AA70",
             light: "#99F6B9",
             dark: "#047A67",
             contrastText: "#fff",
+            10: "#014E51",
+            20: "#02625C",
+            30: "#047A67",
+            40: "#06926D",
+            50: "#09AA70",
+            60: "#3BCC89",
+            70: "#63E59C",
+            80: "#99F6B9",
+            90: "#CBFAD6",
+            95: "#E5FFEB",
+            99: "#F4FFF7"
           },
           error: {
             main: "#D62F3A",
             contrastText: "#fff",
+            10: "#3F012F",
+            20: "#670043",
+            30: "#9C0057",
+            40: "#BA0055",
+            50: "#D9004E",
+            60: "#E83A67",
+            70: "#F36179",
+            80: "#FB969D",
+            90: "#FFB6BB",
+            95: "#FFD0D3",
+            99: "#FFECEE"
           },
           warning: {
             main: "#ed6c02",
             contrastText: "#fff",
+            100: "#EF7300",
+            99: "#FFE7D1"
           },
           info: {
             main: "#0288d1",
             contrastText: "#fff",
+            90: "#29AEE7",
+            80: "#DDF5FF"
           },
           success: {
             main: "#02c076",
             contrastText: "#fff",
+            60: "#0DAA94",
+            50: "#CDFFE5"
           },
           grey: {
+            10: "#101A29",
+            20: "#212E42",
+            30: "#37465C",
             40: "#526075",
-            100: "#E6E6E6",
-            200: "#D5D6D8",
-            500: "#76808F",
-            700: "#37465C",
-            A100: "#FBFBFB",
+            50: "#76808F",
+            60: "#979EA8",
+            70: "#B8BCC2",
+            80: "#D5D6D8",
+            90: "#E6E6E6",
+            95: "#F5F5F5",
+            99: "#FBFBFB",
           },
           background: {
             paper: "#ffffff",
@@ -395,40 +439,85 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             white: "#fff",
           },
           primary: {
-            light: "#BBD3FF", // 200
-            main: "#537FE7", // 500
-            dark: "#2947A6", // 700
+            main: "#7CA2F0",
+            light: "#BBD3FF",
+            dark: "#2947A6",
             contrastText: "#fff",
+            10: "#0A103D",
+            20: "#152A78",
+            30: "#2947A6",
+            40: "#3C61C6",
+            50: "#537FE7",
+            60: "#7CA2F0",
+            70: "#98BAF7",
+            80: "#BBD3FF",
+            90: "#D8E7FF",
+            95: "#E9F2FF",
+            99: "#F4F9FF"
           },
           secondary: {
-            main: "#09AA70", // 500
-            light: "#99F6B9", // 200
-            dark: "#047A67", // 700
+            main: "#09AA70",
+            light: "#99F6B9",
+            dark: "#047A67",
             contrastText: "#fff",
+            10: "#014E51",
+            20: "#02625C",
+            30: "#047A67",
+            40: "#06926D",
+            50: "#09AA70",
+            60: "#3BCC89",
+            70: "#63E59C",
+            80: "#99F6B9",
+            90: "#CBFAD6",
+            95: "#E5FFEB",
+            99: "#F4FFF7"
           },
           error: {
             main: "#D9004E",
             contrastText: "#fff",
+            10: "#3F012F",
+            20: "#670043",
+            30: "#9C0057",
+            40: "#BA0055",
+            50: "#D9004E",
+            60: "#E83A67",
+            70: "#F36179",
+            80: "#FB969D",
+            90: "#FFB6BB",
+            95: "#FFD0D3",
+            99: "#FFECEE"
+            
           },
           warning: {
             main: "#ed6c02",
             contrastText: "#fff",
+            100: "#EF7300",
+            99: "#FFE7D1"
           },
           info: {
             main: "#0288d1",
             contrastText: "#fff",
+            90: "#29AEE7",
+            80: "#DDF5FF"
           },
           success: {
             main: "#02c076",
             contrastText: "#fff",
+            60: "#0DAA94",
+            50: "#CDFFE5"
           },
           grey: {
+            10: "#000203",
+            20: "#0F141D",
+            30: "#141B27",
             40: "#162033",
-            100: "#E6E6E6",
-            200: "#D5D6D8",
-            500: "#76808F",
-            700: "#37465C",
-            A100: "#FBFBFB",
+            50: "#313745",
+            60: "#424A58",
+            70: "#6B7483",
+            80: "#CDD0D4",
+            90: "#E0E0E0",
+            95: "#F5F5F5",
+            99: "#F7F8FA",
           },
           background: {
             paper: "#141B27",
