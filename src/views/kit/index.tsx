@@ -9,11 +9,14 @@ import { ChipKit } from "components/kit/Chip";
 import DividerView from "./dividerView";
 import { TooltipKit } from "components/kit/Tooltip";
 import { DialogKit } from "components/kit/Dialog";
-import { MessageQuestionSvg } from "assets";
+import { MessageQuestionDarkSvg, MessageQuestionLightSvg } from "assets";
+import { IconButtonKit } from "components/kit/IconButton";
 
 const KitView = () => {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
+  const fillColor = theme.palette.mode ===  "dark" ? <MessageQuestionDarkSvg /> : <MessageQuestionLightSvg />;
+
 
   return (
     <Box sx={{ flexGrow: 1 }} padding={4}>
@@ -472,16 +475,59 @@ const KitView = () => {
             <Divider sx={{ my: 2 }} />
             <Box display={"flex"} justifyContent={"space-around"}>
               <Box>
-                <DialogKit
-                  title="عنوان دیالوگ"
-                />
+                <DialogKit title="عنوان دیالوگ" buttonTitle="فونت مشکی " />
               </Box>
               <Box>
                 <DialogKit
                   title="عنوان دیالوگ"
-                  svgIcon={<MessageQuestionSvg />}
+                  svgIcon={fillColor}
+                  buttonTitle="فونت مشکی با آیکون"
                 />
               </Box>
+              <Box>
+                <DialogKit title="عنوان دیالوگ" buttonTitle="فونت طوسی" />
+              </Box>
+              <Box>
+                <DialogKit
+                  title="عنوان دیالوگ"
+                  svgIcon={fillColor}
+                  buttonTitle="فونت طوسی با آیکون"
+                />
+              </Box>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"IconButton"}</Typography>
+            <Divider sx={{ my: 2 }} />
+          </Box>
+          <Box>
+            <Box>
+              {/* <IconButtonKit
+                className={classes.sideBarIconOpen}
+                children={!open ? <MessageQuestionSvg /> : <></>}
+                onClick={handleSideBar}
+                sx={{ marginLeft: "9px" }}
+              /> */}
+              {/* <ButtonKit variant={"contained"}>{"ثبت سفارش"}</ButtonKit>
+              <ButtonKit variant={"secondary"}>{"ثبت سفارش"}</ButtonKit>
+              <ButtonKit variant={"outlined"}>{"ثبت سفارش"}</ButtonKit>
+              <ButtonKit variant={"text"}>{"ثبت سفارش"}</ButtonKit>
+            </Box>
+            <Box mt={2}>
+              <ButtonKit variant={"contained"} color={"secondary"}>
+                {"ثبت سفارش"}
+              </ButtonKit>
+              <ButtonKit variant={"secondary"} color={"secondary"}>
+                {"ثبت سفارش"}
+              </ButtonKit>
+              <ButtonKit variant={"outlined"} color={"secondary"}>
+                {"ثبت سفارش"}
+              </ButtonKit>
+              <ButtonKit variant={"text"} color={"secondary"}>
+                {"ثبت سفارش"}
+              </ButtonKit> */}
             </Box>
           </Box>
         </Grid>

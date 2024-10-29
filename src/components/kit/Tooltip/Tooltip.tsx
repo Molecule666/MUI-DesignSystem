@@ -21,13 +21,11 @@ const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
     fontSize: "12px",
     fontWeight: 500,
     borderRadius: "8px",
-    color:
-      theme.palette.mode === "dark" ? "#d6d5dd" : theme.palette.common.white,
-    backgroundColor: theme.palette.mode === "dark" ? "#313745" : "#526075",
+    backgroundColor: theme.palette.tooltip,
     padding: "8px 16px",
   },
   "& .MuiTooltip-arrow": {
-    color: theme.palette.mode === "dark" ? "#313745" : "#526075",
+    color: theme.palette.tooltip,
   },
 }));
 

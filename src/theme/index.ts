@@ -22,7 +22,12 @@ export enum TextFieldEnum {
 interface IOverrideTheme { }
 interface IOverridePalette {
     primary: PaletteColor & Color;
+    secondary: PaletteColor & Color;
+    grey: PaletteColor & Color;
+    dialog: string;
+    tooltip: string;
 }
+
 // update variants
 interface IOverrideTypographyVariants {
     xs?: React.CSSProperties;
