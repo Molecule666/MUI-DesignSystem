@@ -721,7 +721,11 @@ const KitView = () => {
           </Box>
           <Box>
             <ProgressBarKit value={45} color="primary" variant="determinate" />
-            <ProgressBarKit value={45} color="secondary" variant="determinate" />
+            <ProgressBarKit
+              value={45}
+              color="secondary"
+              variant="determinate"
+            />
             <ProgressBarKit value={45} color="error" variant="determinate" />
           </Box>
           <Box mt={6}>

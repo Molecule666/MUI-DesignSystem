@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Box, LinearProgressProps, Typography } from "@mui/material";
+import {
+  Box,
+  LinearProgressProps,
+  Typography,
+  ThemeProvider,
+} from "@mui/material";
 import { LinearProgress, useTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 
 interface IProgressBarKitProps {
   color?: "primary" | "secondary" | "error";
@@ -8,29 +14,35 @@ interface IProgressBarKitProps {
   variant?: "determinate" | "indeterminate" | undefined;
 }
 
-function LinearProgressWithLabel(
-  props: LinearProgressProps & {
-    value: number;
-    color?: "primary" | "secondary" | "error";
-    variant?: "determinate" | "indeterminate" | undefined;
-  }
-) {
-  return (
-    <Box sx={{ display: "flex", alignItems: "center", direction: "rtl" }}>
-      <Box sx={{ width: "100%", ml: 1 }}>
-        <LinearProgress variant={props.variant} color={props.color} />
-      </Box>
-      <Box sx={{ minWidth: 35 }}>
-        <Typography variant="subtitle1">{`${Math.round(
-          props.value
-        )}%`}</Typography>
-      </Box>
-    </Box>
-  );
-}
+// function LinearProgressWithLabel(
+//   props: LinearProgressProps & {
+//     value: number;
+//     color?: "primary" | "secondary" | "error";
+//     variant?: "determinate" | "indeterminate" | undefined;
+//   }
+// ) {
+//   return (
+//     <Box sx={{ display: "flex", alignItems: "center", direction: "rtl" }}>
+//       <Box sx={{ width: "100%", ml: 1 }}>
+//         <LinearProgress variant={props.variant} color={props.color} />
+//       </Box>
+//       <Box sx={{ minWidth: 35 }}>
+//         <Typography variant="subtitle1">{`${Math.round(
+//           props.value
+//         )}%`}</Typography>
+//       </Box>
+//     </Box>
+//   );
+// }
 
 const ProgressBarKit: React.FC<IProgressBarKitProps> = (props) => {
   const theme = useTheme();
+  const customTheme = createTheme({
+    ...theme, // کپی کردن تم پیش‌فرض
+    direction: "ltr",
+  });
+
+
   const [progress, setProgress] = React.useState<number>(0);
 
   useEffect(() => {
@@ -48,22 +60,24 @@ const ProgressBarKit: React.FC<IProgressBarKitProps> = (props) => {
   }, []);
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box mt={6}>
-        <LinearProgress
-          variant={props.variant}
-          value={props.value}
-          color={props.color}
-        />
-      </Box>
-      {/* <Box mt={6}>
+    <ThemeProvider theme={customTheme}>
+      <Box sx={{ width: "100%" }}>
+        <Box mt={6}>
+          <LinearProgress
+            variant={props.variant}
+            value={props.value}
+            color={props.color}
+          />
+        </Box>
+        {/* <Box mt={6}>
         <LinearProgressWithLabel
           color={props.color}
           variant={props.variant}
           value={progress}
         />
       </Box> */}
-    </Box>
+      </Box>
+    </ThemeProvider>
   );
 };
 

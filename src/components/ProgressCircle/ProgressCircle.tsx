@@ -12,36 +12,36 @@ interface IProgressCircleKitProps {
   variant?: "determinate" | "indeterminate" | undefined;
 }
 
-function CircularProgressWithLabel(
-  props: CircularProgressProps & {
-    value: number;
-    color?: "primary" | "secondary" | "error";
-  }
-) {
-  return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
-      <CircularProgress variant="determinate" {...props} />
-      <Box
-        sx={{
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          position: "absolute",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Typography
-          variant="caption"
-          component="div"
-          color={props.color}
-        >{`${Math.round(props.value)}%`}</Typography>
-      </Box>
-    </Box>
-  );
-}
+// function CircularProgressWithLabel(
+//   props: CircularProgressProps & {
+//     value: number;
+//     color?: "primary" | "secondary" | "error";
+//   }
+// ) {
+//   return (
+//     <Box sx={{ position: "relative", display: "inline-flex" }}>
+//       <CircularProgress variant="determinate" {...props} />
+//       <Box
+//         sx={{
+//           top: 0,
+//           left: 0,
+//           bottom: 0,
+//           right: 0,
+//           position: "absolute",
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "center",
+//         }}
+//       >
+//         <Typography
+//           variant="caption"
+//           component="div"
+//           color={props.color}
+//         >{`${Math.round(props.value)}%`}</Typography>
+//       </Box>
+//     </Box>
+//   );
+// }
 
 const ProgressCircleKit: React.FC<IProgressCircleKitProps> = (props) => {
   const theme = useTheme();
