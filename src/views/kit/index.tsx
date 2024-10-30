@@ -15,6 +15,8 @@ import {
   MessageQuestionLightSvg,
 } from "assets";
 import { IconButtonKit } from "components/kit/IconButton";
+import ProgressBarKit from "components/kit/ProgressBar/ProgressBar";
+import { ProgressCircleKit } from "components/ProgressCircle";
 
 const KitView = () => {
   const theme = useTheme();
@@ -535,7 +537,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={2}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -554,7 +558,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={3}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -572,7 +578,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={4}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -590,7 +598,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={5}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -628,7 +638,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={2}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -646,7 +658,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={3}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -664,7 +678,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={4}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -682,7 +698,9 @@ const KitView = () => {
                 <IconButtonKit
                   key={5}
                   mode={"isDefult"}
-                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  onClick={() => {
+                    alert("این پیام صرفا یک پیغام خالی است");
+                  }}
                   isCheck
                   isDefult
                   isEdit
@@ -694,6 +712,57 @@ const KitView = () => {
                 />
               </TooltipKit>
             </Box>
+          </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"Progressive Indicator"}</Typography>
+            <Divider sx={{ my: 2 }} />
+          </Box>
+          <Box>
+            <ProgressBarKit value={45} color="primary" variant="determinate" />
+            <ProgressBarKit value={45} color="secondary" variant="determinate" />
+            <ProgressBarKit value={45} color="error" variant="determinate" />
+          </Box>
+          <Box mt={6}>
+            <Box display={"flex"} justifyContent={"space-around"}>
+              <Box>
+                <ProgressCircleKit color="primary" />
+                <ProgressCircleKit color="secondary" />
+                <ProgressCircleKit color="error" />
+              </Box>
+              <Box>
+                <ProgressCircleKit
+                  value={100}
+                  color="primary"
+                  variant="determinate"
+                />
+              </Box>
+              <Box>
+                <ProgressCircleKit
+                  value={75}
+                  color="primary"
+                  variant="determinate"
+                />
+              </Box>
+              <Box>
+                <ProgressCircleKit
+                  value={50}
+                  color="primary"
+                  variant="determinate"
+                />
+              </Box>
+              <Box>
+                <ProgressCircleKit
+                  value={25}
+                  color="primary"
+                  variant="determinate"
+                />
+              </Box>
+            </Box>
+          </Box>
+          <Box mt={6}>
+            <Box></Box>
           </Box>
         </Grid>
       </Grid>
