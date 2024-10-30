@@ -9,14 +9,22 @@ import { ChipKit } from "components/kit/Chip";
 import DividerView from "./dividerView";
 import { TooltipKit } from "components/kit/Tooltip";
 import { DialogKit } from "components/kit/Dialog";
-import { MessageQuestionDarkSvg, MessageQuestionLightSvg } from "assets";
+import {
+  IconlyLightoutlineMessage,
+  MessageQuestionDarkSvg,
+  MessageQuestionLightSvg,
+} from "assets";
 import { IconButtonKit } from "components/kit/IconButton";
 
 const KitView = () => {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
-  const fillColor = theme.palette.mode ===  "dark" ? <MessageQuestionDarkSvg /> : <MessageQuestionLightSvg />;
-
+  const fillColor =
+    theme.palette.mode === "dark" ? (
+      <MessageQuestionDarkSvg />
+    ) : (
+      <MessageQuestionLightSvg />
+    );
 
   return (
     <Box sx={{ flexGrow: 1 }} padding={4}>
@@ -502,32 +510,189 @@ const KitView = () => {
             <Typography variant="h1">{"IconButton"}</Typography>
             <Divider sx={{ my: 2 }} />
           </Box>
-          <Box>
+          <Box display={"flex"} justifyContent={"space-around"}>
             <Box>
-              {/* <IconButtonKit
-                className={classes.sideBarIconOpen}
-                children={!open ? <MessageQuestionSvg /> : <></>}
-                onClick={handleSideBar}
-                sx={{ marginLeft: "9px" }}
-              /> */}
-              {/* <ButtonKit variant={"contained"}>{"ثبت سفارش"}</ButtonKit>
-              <ButtonKit variant={"secondary"}>{"ثبت سفارش"}</ButtonKit>
-              <ButtonKit variant={"outlined"}>{"ثبت سفارش"}</ButtonKit>
-              <ButtonKit variant={"text"}>{"ثبت سفارش"}</ButtonKit>
+              <Typography>Disabled</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={1}
+                  mode={"isDefult"}
+                  disabled
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.grey[400]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="medium"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
             </Box>
-            <Box mt={2}>
-              <ButtonKit variant={"contained"} color={"secondary"}>
-                {"ثبت سفارش"}
-              </ButtonKit>
-              <ButtonKit variant={"secondary"} color={"secondary"}>
-                {"ثبت سفارش"}
-              </ButtonKit>
-              <ButtonKit variant={"outlined"} color={"secondary"}>
-                {"ثبت سفارش"}
-              </ButtonKit>
-              <ButtonKit variant={"text"} color={"secondary"}>
-                {"ثبت سفارش"}
-              </ButtonKit> */}
+            <Box>
+              <Typography>Pressed</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={2}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[80]}
+                  selected
+                  children={<IconlyLightoutlineMessage />}
+                  size="medium"
+                  sx={{ margin: "0 0.3rem" }}
+                  //   popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Focused</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={3}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[90]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="medium"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Hovered</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={4}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[95]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="medium"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Enable</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={5}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.common.white}
+                  children={<IconlyLightoutlineMessage />}
+                  size="medium"
+                  sx={{ margin: "0 0.3rem" }}
+                  //   popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+          </Box>
+          <Box display={"flex"} justifyContent={"space-around"} mt={6}>
+            <Box>
+              <Typography>Disabled</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={1}
+                  mode={"isDefult"}
+                  disabled
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.grey[400]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="small"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Pressed</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={2}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[80]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="small"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Focused</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={3}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[90]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="small"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Hovered</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={4}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.primary[95]}
+                  children={<IconlyLightoutlineMessage />}
+                  size="small"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
+            </Box>
+            <Box>
+              <Typography>Enable</Typography>
+              <TooltipKit title={"کارگزاری حافظ"} placement="bottom">
+                <IconButtonKit
+                  key={5}
+                  mode={"isDefult"}
+                  onClick={() => {alert("این پیام صرفا یک پیغام خالی است")}}
+                  isCheck
+                  isDefult
+                  isEdit
+                  fill={theme.palette.common.white}
+                  children={<IconlyLightoutlineMessage />}
+                  size="small"
+                  sx={{ margin: "0 0.3rem" }}
+                  // popoverText={"کارگزاری حافظ"}
+                />
+              </TooltipKit>
             </Box>
           </Box>
         </Grid>
