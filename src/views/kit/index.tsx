@@ -828,21 +828,42 @@ const KitView = () => {
             <Typography variant="h1">{"Tab Item"}</Typography>
             <Divider sx={{ my: 2 }} />
           </Box>
-          <TabsKit
-            //   className={classes.ordersTab}
-            variant="standard"
-            initialValue={0}
-            tabs={[
-              {
-                title: "Tab 1",
-                children: "Tab-1 information",
-              },
-              {
-                title: "Tab 2",
-                children: "Tab-2 information",
-              },
-            ]}
-          />
+          <Box display={"flex"} justifyContent={"space-around"}>
+            <TabsKit
+              //   className={classes.ordersTab}
+              variant="standard"
+              initialValue={0}
+              tabs={[
+                {
+                  title: "Tab 1",
+                  children: "Tab-1 information",
+                },
+                {
+                  title: "Tab 2",
+                  children: "Tab-2 information",
+                },
+              ]}
+            />
+            <TabsKit
+              //   className={classes.ordersTab}
+              variant="standard"
+              initialValue={0}
+              tabs={[
+                {
+                  title: "Tab 1",
+                  children: "Tab-1 information",
+                },
+                {
+                  title: "Tab 2",
+                  children: "Tab-2 information",
+                },
+                {
+                    title: "Tab 3",
+                    children: "Tab-3 information",
+                  },
+              ]}
+            />
+          </Box>
         </Grid>
       </Grid>
     </Box>

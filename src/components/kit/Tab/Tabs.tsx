@@ -6,7 +6,6 @@ import {
   Tab,
   Tabs,
   Typography,
-  useTheme,
   useMediaQuery,
   styled,
 } from "@mui/material";
@@ -15,7 +14,7 @@ import {
 
 interface StyledTabsProps {
   value: number;
-  //   onChange: (event: React.SyntheticEvent, newValue: number) => void;
+  onChange: (event: React.SyntheticEvent, newValue: number) => void;
   children?: React.ReactElement | any[];
   secondary?: boolean;
   tertiary?: boolean;
@@ -24,7 +23,7 @@ interface StyledTabsProps {
 }
 
 const StyledTabs = styled(Tabs)<StyledTabsProps>(
-  ({ theme, tertiary, bottomtab }) => ({
+  ({ theme, color, tertiary, bottomtab }) => ({
     borderBottom: tertiary
       ? theme.palette.mode === "dark"
         ? `1px solid ${theme.palette.grey[400]}`
@@ -33,9 +32,6 @@ const StyledTabs = styled(Tabs)<StyledTabsProps>(
     "& .MuiTabs-indicator": {
       height: tertiary ? "2px" : "calc(100% - 13px)",
       bottom: tertiary ? "0" : "0.65rem",
-      backgroundColor: tertiary
-        ? theme.palette.primary.main
-        : theme.palette.primary.main,
     },
     "& .Mui-selected": {
       color: tertiary ? theme.palette.primary.main : "rgb(255, 255, 255)",
@@ -55,7 +51,7 @@ const StyledTab = styled(Tab)<StyledTabProps>(
   ({ theme, tertiary, secondary }) => ({
     zIndex: 2,
     textTransform: "none",
-    fontWeight: theme.typography.fontWeightRegular,
+    fontWeight: theme.typography.fontWeightBold,
     fontSize: theme.typography.pxToRem(14),
     marginRight: theme.spacing(1),
     color: theme.palette.mode === "dark" ? "#fff" : theme.palette.grey[600],
@@ -70,7 +66,6 @@ const StyledTab = styled(Tab)<StyledTabProps>(
         ? "#868788"
         : theme.palette.common.white,
     },
-    // minHeight: "3.2rem",
   })
 );
 
@@ -197,37 +192,11 @@ const TabsKit: React.FC<ITabsKit> = ({
 
   return (
     <Box sx={{ flexGrow: 1, height: "100%" }}>
-      {bottomtab &&
-        tabs.map((item, index) => (
-          <TabPanel key={index} value={value} index={item.key || index}>
-            {item.children}
-          </TabPanel>
-        ))}
       {hasButton ? (
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <StyledTabs
-            className={className}
-            value={value}
-            onChange={handleChange}
-            differentbtn={differentbtn}
-            secondary={secondary}
-            tertiary={tertiary}
-            variant={variant}
-          >
-            {tabs.map((item, index) => (
-              <StyledTab
-                secondary={secondary}
-                tertiary={tertiary}
-                key={index}
-                label={item.title}
-              />
-            ))}
-          </StyledTabs>
           {tabs.map((item, index) => (
             <TabPanel key={index} value={value} index={item.key || index}>
-              {hasButton && (
-                <Box sx={{ "& button": { mx: 0.5 } }}>{item.button}</Box>
-              )}
+              {hasButton && <Box>{item.button}</Box>}
             </TabPanel>
           ))}
         </Box>
@@ -241,6 +210,11 @@ const TabsKit: React.FC<ITabsKit> = ({
           tertiary={tertiary}
           variant={variant}
           bottomtab={bottomtab}
+          TabIndicatorProps={{
+            style: {
+              borderRadius: 8,
+            },
+          }}
         >
           {tabs.map((item, index) => (
             <StyledTab
