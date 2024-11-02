@@ -17,8 +17,8 @@ import {
 import { IconButtonKit } from "components/kit/IconButton";
 import ProgressBarKit from "components/kit/ProgressBar/ProgressBar";
 import { ProgressCircleKit } from "components/kit/ProgressCircle";
-import { error } from "console";
 import { RadioButtonKit } from "components/kit/RadioButton";
+import { TabsKit } from "components/kit/Tab";
 
 const KitView = () => {
   const theme = useTheme();
@@ -822,6 +822,27 @@ const KitView = () => {
               />
             </Box>
           </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"Tab Item"}</Typography>
+            <Divider sx={{ my: 2 }} />
+          </Box>
+          <TabsKit
+            //   className={classes.ordersTab}
+            variant="standard"
+            initialValue={0}
+            tabs={[
+              {
+                title: "Tab 1",
+                children: "Tab-1 information",
+              },
+              {
+                title: "Tab 2",
+                children: "Tab-2 information",
+              },
+            ]}
+          />
         </Grid>
       </Grid>
     </Box>
