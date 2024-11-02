@@ -17,6 +17,8 @@ import {
 import { IconButtonKit } from "components/kit/IconButton";
 import ProgressBarKit from "components/kit/ProgressBar/ProgressBar";
 import { ProgressCircleKit } from "components/kit/ProgressCircle";
+import { error } from "console";
+import { RadioButtonKit } from "components/kit/RadioButton";
 
 const KitView = () => {
   const theme = useTheme();
@@ -767,6 +769,58 @@ const KitView = () => {
           </Box>
           <Box mt={6}>
             <Box></Box>
+          </Box>
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <Box my={3}>
+            <Typography variant="h1">{"Radio Button"}</Typography>
+            <Divider sx={{ my: 2 }} />
+          </Box>
+          <Box display={"flex"} justifyContent={"space-around"}>
+            <Box>
+              <RadioButtonKit
+                color="primary"
+                size="medium"
+                label1="No"
+                label2="Yes"
+                disabled
+              />
+              <RadioButtonKit
+                color="primary"
+                size="small"
+                label1="No"
+                label2="Yes"
+                disabled
+              />
+            </Box>
+            <Box>
+              <RadioButtonKit
+                color="error"
+                size="medium"
+                label1="No"
+                label2="Yes"
+              />
+              <RadioButtonKit
+                color="error"
+                size="small"
+                label1="No"
+                label2="Yes"
+              />
+            </Box>
+            <Box>
+              <RadioButtonKit
+                color="primary"
+                size="medium"
+                label1="No"
+                label2="Yes"
+              />
+              <RadioButtonKit
+                color="primary"
+                size="small"
+                label1="No"
+                label2="Yes"
+              />
+            </Box>
           </Box>
         </Grid>
       </Grid>
