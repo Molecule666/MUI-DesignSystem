@@ -16,7 +16,7 @@ import {
 } from "assets";
 import { IconButtonKit } from "components/kit/IconButton";
 import ProgressBarKit from "components/kit/ProgressBar/ProgressBar";
-import { ProgressCircleKit } from "components/ProgressCircle";
+import { ProgressCircleKit } from "components/kit/ProgressCircle";
 
 const KitView = () => {
   const theme = useTheme();
