@@ -4,10 +4,12 @@ import Grid from "@mui/material/Grid2";
 import { ButtonKit } from "components/kit/Button";
 import { InputKit } from "components/kit/Input";
 import { ColorModeContext } from "App";
-import { CheckboxKit } from "components/kit/Checkbox";
+import Icon1 from "@mui/icons-material/AccessAlarmsTwoTone";
+import Icon2 from "@mui/icons-material/AbcSharp";
 import CheckBoxView from "views/kit/checkboxVeiw";
 import { ChipKit } from "components/kit/Chip";
 import SwitchExample from "./switchView";
+import { ListItemKit } from "components/kit/ListItem";
 
 const KitView = () => {
   const theme = useTheme();
@@ -339,6 +341,12 @@ const KitView = () => {
         </Grid>
         <Grid size={6} border={1} borderRadius={2} p={1}>
           <SwitchExample />
+        </Grid>
+
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <ListItemKit text="Item 1" leftIcon={<Icon1 />} />
+          <ListItemKit text="Item 2" rightIcon={<Icon2 />} />
+          <ListItemKit text="Item 3" />{" "}
         </Grid>
       </Grid>
     </Box>
