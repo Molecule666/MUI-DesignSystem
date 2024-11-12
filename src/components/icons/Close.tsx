@@ -10,7 +10,7 @@ const SvgClose = (props: SVGProps<SVGSVGElement>) => (
     <defs>
       <style>
         {
-          ".close_svg__cls-1{fill:#868788;stroke:transparent;stroke-miterlimit:10}"
+          ".close_svg__cls-1{fill:currentColor;stroke:transparent;stroke-miterlimit:10}"
         }
       </style>
     </defs>

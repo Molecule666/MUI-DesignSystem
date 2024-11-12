@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Divider, Typography, useTheme } from "@mui/material";
+import { Box, Button, Divider, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { ButtonKit } from "components/kit/Button";
 import { InputKit } from "components/kit/Input";
@@ -11,6 +11,7 @@ import { ChipKit } from "components/kit/Chip";
 import SwitchExample from "./switchView";
 import { ListItemKit } from "components/kit/ListItem";
 import { DropdownKit } from "components/kit/Dropdown";
+import ModalSheet from "components/kit/ModalSheet/ModalSheet";
 
 const KitView = () => {
   const theme = useTheme();
@@ -19,6 +20,11 @@ const KitView = () => {
     { text: "Item 1", leftIcon: <Icon1 />, rightIcon: <Icon2 /> },
     { text: "Item 2", leftIcon: <Icon1 />, rightIcon: <Icon2 /> },
   ];
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpen = () => {
+    setOpenModal(true);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }} padding={4}>
@@ -356,6 +362,32 @@ const KitView = () => {
 
         <Grid size={6} border={1} borderRadius={2} p={1}>
           <DropdownKit items={items} label={"انتخاب"} />
+        </Grid>
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <div>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => handleOpen()}
+            >
+              open{" "}
+            </Button>
+
+            <ModalSheet
+              open={openModal}
+              onClose={() => setOpenModal(false)}
+              label="انتخاب کنید"
+              description={"توضیحات"}
+              children={
+                <DropdownKit
+                  items={items}
+                  label={"label"}
+                  multiple={true}
+                  searchable={true}
+                />
+              }
+            />
+          </div>{" "}
         </Grid>
       </Grid>
     </Box>

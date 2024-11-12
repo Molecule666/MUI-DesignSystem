@@ -86,8 +86,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   const selectedText = multiple
     ? selectedItems.map((item) => item.text).join(", ")
     : selectedItems[0]?.text || "";
-  const theme = useTheme();
 
+  const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
 
   return (
@@ -96,7 +96,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       <OutlinedInput
         sx={{
           height: "56px",
-          width: "245px",
+          width: "100%",
           cursor: "pointer",
           "& .MuiInputBase-input": {
             cursor: "pointer",
@@ -120,7 +120,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         <Box
           sx={{
             position: "absolute",
-            width: "245px",
+            width: "100%",
             maxHeight: "200px",
             overflowY: "auto",
             borderRadius: "8px",
