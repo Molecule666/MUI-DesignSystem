@@ -9,7 +9,6 @@ import {
   OutlinedInput,
   Checkbox,
   ListItem,
-  ListItemText,
   useTheme,
   InputAdornment,
 } from "@mui/material";
