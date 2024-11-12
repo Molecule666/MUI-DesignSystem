@@ -13,10 +13,7 @@ const SwitchExample = () => {
 
   return (
     <div>
-      <h3>Enabled Switch with Custom Icons</h3>
-      <SwitchKit checked={isChecked} onChange={handleToggle} />
-
-      <h3>Disabled Switch</h3>
+      <h3>Default Switch with Custom Icon</h3>
       <SwitchKit
         checked={isChecked}
         onChange={handleToggle}
