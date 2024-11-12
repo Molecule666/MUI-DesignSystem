@@ -10,10 +10,15 @@ import CheckBoxView from "views/kit/checkboxVeiw";
 import { ChipKit } from "components/kit/Chip";
 import SwitchExample from "./switchView";
 import { ListItemKit } from "components/kit/ListItem";
+import { DropdownKit } from "components/kit/Dropdown";
 
 const KitView = () => {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
+  const items = [
+    { text: "Item 1", leftIcon: <Icon1 />, rightIcon: <Icon2 /> },
+    { text: "Item 2", leftIcon: <Icon1 />, rightIcon: <Icon2 /> },
+  ];
 
   return (
     <Box sx={{ flexGrow: 1 }} padding={4}>
@@ -347,6 +352,10 @@ const KitView = () => {
           <ListItemKit text="Item 1" leftIcon={<Icon1 />} />
           <ListItemKit text="Item 2" rightIcon={<Icon2 />} />
           <ListItemKit text="Item 3" />{" "}
+        </Grid>
+
+        <Grid size={6} border={1} borderRadius={2} p={1}>
+          <DropdownKit items={items} label={"انتخاب"} />
         </Grid>
       </Grid>
     </Box>

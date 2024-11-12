@@ -13,7 +13,6 @@ const ListItemComponent = ({
   rightIcon = null,
 }: IListItem) => {
   const theme = useTheme();
-  const isDarkMode = theme.palette.mode === "dark";
 
   return (
     <ListItem>
