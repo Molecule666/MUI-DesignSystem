@@ -1,182 +1,182 @@
 import React from "react";
 import { LinkProps, PaletteMode, SvgIcon, ThemeOptions } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, color } from "@mui/system";
 // import { CheckedTrueSvg } from "../assets";
 // import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 // import LinkBehavior from "../components/LinkBehavior";
 
 const theme: ThemeOptions = {
-  direction: "rtl",
-  breakpoints: {
-    keys: ["xs", "sm", "md", "lg", "xl", "xxl"],
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-      xxl: 1920,
+    direction: "rtl",
+    breakpoints: {
+        keys: ["xs", "sm", "md", "lg", "xl", "xxl"],
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 900,
+            lg: 1200,
+            xl: 1536,
+            xxl: 1920,
+        },
+        unit: "px",
     },
-    unit: "px",
-  },
-  components: {
-    MuiTypography: {
-      defaultProps: {
-        color: "text.primary",
-      },
-    },
-    MuiButtonBase: {
-      styleOverrides: {
-        root: {
-          "&.MuiIconButton-root": {
-            padding: "4px",
-          },
-        },
-      },
-    },
-    MuiButton: {
-      defaultProps: { disableElevation: true, size: "base" },
-      styleOverrides: {
-        sizeSmall: { padding: "4px 6px", lineHeight: 1 },
-        sizeXs: {
-          padding: "7px 11px",
-          fontSize: "1.3rem",
-          lineHeight: 1.23,
-        },
-        sizeSm: {
-          padding: "9px 13px",
-          lineHeight: 1.23,
-        },
-        sizeBase: {
-          padding: "10px 24px",
-          lineHeight: 1.43,
-          fontSize: "1.4rem",
-        },
-        sizeLg: {
-          padding: "9px 17px",
-          lineHeight: 1.72,
-        },
-        sizeXl: {
-          padding: "13px 25px",
-          lineHeight: 1.6,
-          fontSize: "1.5rem",
-        },
-      },
-    },
-    MuiFab: {
-      defaultProps: { size: "base", color: "primary" },
-      styleOverrides: {
-        root: {
-          boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
-          "&:active": {
-            boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
-          },
-        },
-        extended: {
-          width: "auto !important",
-        },
-        sizeXs: {
-          height: 30,
-          width: 30,
-        },
-        sizeSm: {
-          height: 34,
-          width: 34,
-        },
-        sizeBase: {
-          height: 38,
-          width: 38,
-        },
-        sizeLg: {
-          height: 42,
-          width: 42,
-        },
-        sizeXl: {
-          height: 50,
-          width: 50,
-        },
-      },
-    },
-    MuiInputLabel: {
-      styleOverrides: {
-        root: {
-          color: "#979EA8",
-          fontSize: "1.4rem",
-          "&.Mui-disabled": {
-            color: "#B8BCC2",
-          },
-          "&.Mui-error": {
-            color: "red",
-          },
-        },
-      },
-    },
-    MuiInputBase: {
-      styleOverrides: {
-        inputSizeSmall: {
-          paddingTop: "2px !important",
-          paddingBottom: "2px !important",
-          height: "2.2rem",
-        },
-        input: {
-          paddingTop: "10px !important",
-          paddingBottom: "13px !important",
-          fontSize: "1.4rem",
-          "@media (max-width:899px)": {
-            fontSize: "1.2rem",
-          },
-        },
-        root: {
-          ":hover": {
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "primary.main !important",
+    components: {
+        MuiTypography: {
+            defaultProps: {
+                color: "text.primary",
             },
-          },
-          // "& .Mui-error": {
-          //     borderColor: "error.main", // Styling for error state
-          // },
         },
-      },
-    },
-    MuiCheckbox: {
-      defaultProps: {
-        disableRipple: true,
-        icon: (
-          <Box
-            sx={{
-              width: "16px",
-              height: "16px",
-              background: "transparent",
-              border: "2px solid #D5D6D8",
-              borderRadius: "5px",
-            }}
-          />
-        ),
-        sx: {
-          "&:hover": { bgcolor: "transparent" },
-          "&:error": { borderColor: "error.main" },
+        MuiButtonBase: {
+            styleOverrides: {
+                root: {
+                    "&.MuiIconButton-root": {
+                        padding: "4px",
+                    },
+                },
+            },
         },
-      },
-    },
-    MuiChip: {
-      defaultProps: {},
-    },
-    MuiDivider: {
-      styleOverrides: {
-        root: {
-          borderColor: "divider",
+        MuiButton: {
+            defaultProps: { disableElevation: true, size: "base" },
+            styleOverrides: {
+                sizeSmall: { padding: "4px 6px", lineHeight: 1 },
+                sizeXs: {
+                    padding: "7px 11px",
+                    fontSize: "1.3rem",
+                    lineHeight: 1.23,
+                },
+                sizeSm: {
+                    padding: "9px 13px",
+                    lineHeight: 1.23,
+                },
+                sizeBase: {
+                    padding: "10px 24px",
+                    lineHeight: 1.43,
+                    fontSize: "1.4rem",
+                },
+                sizeLg: {
+                    padding: "9px 17px",
+                    lineHeight: 1.72,
+                },
+                sizeXl: {
+                    padding: "13px 25px",
+                    lineHeight: 1.6,
+                    fontSize: "1.5rem",
+                },
+            },
         },
-      },
-    },
-    MuiRadio: {
-      defaultProps: {
-        sx: {
-          "&:hover": { bgcolor: "transparent" },
+        MuiFab: {
+            defaultProps: { size: "base", color: "primary" },
+            styleOverrides: {
+                root: {
+                    boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
+                    "&:active": {
+                        boxShadow: "0px 1px 2px rgba(0, 0, 0, 0.05)",
+                    },
+                },
+                extended: {
+                    width: "auto !important",
+                },
+                sizeXs: {
+                    height: 30,
+                    width: 30,
+                },
+                sizeSm: {
+                    height: 34,
+                    width: 34,
+                },
+                sizeBase: {
+                    height: 38,
+                    width: 38,
+                },
+                sizeLg: {
+                    height: 42,
+                    width: 42,
+                },
+                sizeXl: {
+                    height: 50,
+                    width: 50,
+                },
+            },
         },
-      },
-    },
-    MuiCssBaseline: {
-      styleOverrides: `
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    color: "#979EA8",
+                    fontSize: "1.4rem",
+                    "&.Mui-disabled": {
+                        color: "#B8BCC2",
+                    },
+                    "&.Mui-error": {
+                        color: "red",
+                    },
+                },
+            },
+        },
+        MuiInputBase: {
+            styleOverrides: {
+                inputSizeSmall: {
+                    paddingTop: "2px !important",
+                    paddingBottom: "2px !important",
+                    height: "2.2rem",
+                },
+                input: {
+                    paddingTop: "10px !important",
+                    paddingBottom: "13px !important",
+                    fontSize: "1.4rem",
+                    "@media (max-width:899px)": {
+                        fontSize: "1.2rem",
+                    },
+                },
+                root: {
+                    ":hover": {
+                        "& .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "primary.main !important",
+                        },
+                    },
+                    // "& .Mui-error": {
+                    //     borderColor: "error.main", // Styling for error state
+                    // },
+                },
+            },
+        },
+        MuiCheckbox: {
+            defaultProps: {
+                disableRipple: true,
+                icon: (
+                    <Box
+                        sx={{
+                            width: "16px",
+                            height: "16px",
+                            background: "transparent",
+                            border: "2px solid #D5D6D8",
+                            borderRadius: "5px",
+                        }}
+                    />
+                ),
+                sx: {
+                    "&:hover": { bgcolor: "transparent" },
+                    "&:error": { borderColor: "error.main" },
+                },
+            },
+        },
+        MuiChip: {
+            defaultProps: {},
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    borderColor: "divider",
+                },
+            },
+        },
+        MuiRadio: {
+            defaultProps: {
+                sx: {
+                    "&:hover": { bgcolor: "transparent" },
+                },
+            },
+        },
+        MuiCssBaseline: {
+            styleOverrides: `
         h1 {
           color: grey;
         }
@@ -184,356 +184,400 @@ const theme: ThemeOptions = {
           font-size: 62.5%;
         }
       `,
-    },
-    MuiPagination: {
-      styleOverrides: {
-        root: {
-          borderRadius: 4,
-          marginRight: "1.5rem",
-          "& .MuiPagination-ul li button": {
-            color: "#fff",
-            backgroundColor: "#3b3b43",
-            borderRadius: 4,
-            minWidth: "25px",
-            height: "25px",
-            margin: "2px",
-          },
-          "& .Mui-selected": {
-            border: `solid 1px #FADD62`,
-            backgroundColor: `#FFEEA7 !important`,
-          },
         },
-      },
-    },
-    MuiTable: {
-      styleOverrides: {
-        root: {
-          "& .MuiTableCell-head": {
-            padding: "0.4rem 1.3rem",
-            lineHeight: 1.4,
-            fontSize: "1.2rem",
-            textAlign: "left",
-            fontWeight: 400,
-            "@media (max-width:899px)": {
-              padding: "0.4rem 0.5rem",
+        MuiPagination: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 4,
+                    marginRight: "1.5rem",
+                    "& .MuiPagination-ul li button": {
+                        color: "#fff",
+                        backgroundColor: "#3b3b43",
+                        borderRadius: 4,
+                        minWidth: "25px",
+                        height: "25px",
+                        margin: "2px",
+                    },
+                    "& .Mui-selected": {
+                        border: `solid 1px #FADD62`,
+                        backgroundColor: `#FFEEA7 !important`,
+                    },
+                },
             },
-          },
-          "& .MuiTableCell-body": {
-            fontSize: "1.4rem",
-            textAlign: "left",
+        },
+        MuiTable: {
+            styleOverrides: {
+                root: {
+                    "& .MuiTableCell-head": {
+                        padding: "0.4rem 1.3rem",
+                        lineHeight: 1.4,
+                        fontSize: "1.2rem",
+                        textAlign: "left",
+                        fontWeight: 400,
+                        "@media (max-width:899px)": {
+                            padding: "0.4rem 0.5rem",
+                        },
+                    },
+                    "& .MuiTableCell-body": {
+                        fontSize: "1.4rem",
+                        textAlign: "left",
+                        fontWeight: 500,
+                        lineHeight: 1.6,
+                        padding: "0.4rem 1.3rem",
+                        "@media (max-width:899px)": {
+                            padding: "0.4rem 0.5rem",
+                        },
+                    },
+                },
+            },
+        },
+        MuiAutocomplete: {
+            styleOverrides: {
+                paper: {
+                    backgroundColor: "rgb(37 43 61 / 70%) !important",
+                    color: "#d6d5dd",
+                },
+                option: {
+                    padding: "8px",
+                    borderBottom: "solid 1px #313136",
+                    "&.Mui-focused": {
+                        backgroundColor: "#212639 !important",
+                        color: "#537FE7 !important",
+                    },
+                },
+            },
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    backgroundImage: "unset",
+                },
+            },
+        },
+        MuiFormHelperText: {
+            styleOverrides: {
+                root: {
+                    fontSize: "1.1rem !important",
+                },
+            },
+            defaultProps: {
+                sx: {
+                    // "&:hover": { bgcolor: "transparent" },
+                    color: "error.main",
+                    // textAlign: "right",
+                },
+            },
+        },
+        MuiListItem: {
+            defaultProps: {
+                sx: {
+                    fontSize: "14px",
+                    fontWeight: "400",
+                    height: "48px",
+                    display: "flex !important",
+                    gap: "16px",
+                    backgroundColor: "listItem.background",
+                    color: "listItem.color",
+                    "&:hover": {
+                        backgroundColor: "listItem.hover.backgroundColor",
+                    },
+                    cursor: "pointer",
+                },
+            },
+        },
+        MuiListItemIcon: {
+            defaultProps: {
+                sx: {
+                    minWidth: "unset",
+                    color: "listItemIcon.color",
+                },
+            },
+        },
+    },
+    shape: {
+        borderRadius: 8,
+        rounded: "1000rem",
+    },
+    // shadows: [
+    //     "none",
+    //     "0 1px 15px 0 rgba(0, 0, 0, 0.5)",
+    //     "0 0.5px 0.5px 0 rgba(0, 0, 0, 0.14)",
+    //     // other shadow definitions
+    // ],
+    typography: {
+        htmlFontSize: 10,
+        fontFamily: "YekanBakh",
+        fontSize: 14,
+        fontWeightLight: 300,
+        fontWeightRegular: 400,
+        fontWeightMedium: 500,
+        fontWeightBold: 700,
+        h1: {
+            fontWeight: 700,
+            fontSize: "3.6rem",
+            lineHeight: 1,
+        },
+        h2: {
             fontWeight: 500,
-            lineHeight: 1.6,
-            padding: "0.4rem 1.3rem",
-            "@media (max-width:899px)": {
-              padding: "0.4rem 0.5rem",
-            },
-          },
+            fontSize: "2.2rem",
+            lineHeight: 1,
+            color: "primary.main",
         },
-      },
-    },
-    MuiAutocomplete: {
-      styleOverrides: {
-        paper: {
-          backgroundColor: "rgb(37 43 61 / 70%) !important",
-          color: "#d6d5dd",
+        h3: {
+            fontWeight: 500,
+            fontSize: "2rem",
+            lineHeight: 1,
+            color: "primary.main",
         },
-        option: {
-          padding: "8px",
-          borderBottom: "solid 1px #313136",
-          "&.Mui-focused": {
-            backgroundColor: "#212639 !important",
-            color: "#537FE7 !important",
-          },
+        h4: {
+            fontWeight: 400,
+            fontSize: "2rem",
+            lineHeight: 1,
         },
-      },
-    },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          backgroundImage: "unset",
+        h5: {
+            fontWeight: 400,
+            fontSize: "1.8rem",
+            lineHeight: 1,
         },
-      },
-    },
-    MuiFormHelperText: {
-      styleOverrides: {
-        root: {
-          fontSize: "1.1rem !important",
+        h6: {
+            fontWeight: 400,
+            fontSize: "1.6rem",
+            lineHeight: 1,
         },
-      },
-      defaultProps: {
-        sx: {
-          // "&:hover": { bgcolor: "transparent" },
-          color: "error.main",
-          // textAlign: "right",
-        },
-      },
+        subtitle1: { fontWeight: 400, fontSize: "1.4rem", lineHeight: 1.6 },
+        subtitle2: { fontWeight: 400, fontSize: "1.2rem", lineHeight: 1.4 },
+        body1: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
+        body2: { fontWeight: 400, fontSize: "1.3rem", lineHeight: 1 },
+        button: { fontWeight: 400, fontSize: "1.4rem", lineHeight: 1 },
+        caption: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
+        overline: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
     },
-  },
-  shape: {
-    borderRadius: 8,
-    rounded: "1000rem",
-  },
-  // shadows: [
-  //     "none",
-  //     "0 1px 15px 0 rgba(0, 0, 0, 0.5)",
-  //     "0 0.5px 0.5px 0 rgba(0, 0, 0, 0.14)",
-  //     // other shadow definitions
-  // ],
-  typography: {
-    htmlFontSize: 10,
-    fontFamily: "YekanBakh",
-    fontSize: 14,
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
-    fontWeightBold: 700,
-    h1: {
-      fontWeight: 700,
-      fontSize: "3.6rem",
-      lineHeight: 1,
-    },
-    h2: {
-      fontWeight: 500,
-      fontSize: "2.2rem",
-      lineHeight: 1,
-      color: "primary.main",
-    },
-    h3: {
-      fontWeight: 500,
-      fontSize: "2rem",
-      lineHeight: 1,
-      color: "primary.main",
-    },
-    h4: {
-      fontWeight: 400,
-      fontSize: "2rem",
-      lineHeight: 1,
-    },
-    h5: {
-      fontWeight: 400,
-      fontSize: "1.8rem",
-      lineHeight: 1,
-    },
-    h6: {
-      fontWeight: 400,
-      fontSize: "1.6rem",
-      lineHeight: 1,
-    },
-    subtitle1: { fontWeight: 400, fontSize: "1.4rem", lineHeight: 1.6 },
-    subtitle2: { fontWeight: 400, fontSize: "1.2rem", lineHeight: 1.4 },
-    body1: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
-    body2: { fontWeight: 400, fontSize: "1.3rem", lineHeight: 1 },
-    button: { fontWeight: 400, fontSize: "1.4rem", lineHeight: 1 },
-    caption: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
-    overline: { fontWeight: 400, fontSize: "1.6rem", lineHeight: 1 },
-  },
 };
 
 export const getDesignTokens = (mode: PaletteMode) => ({
-  palette: {
-    mode,
-    ...(mode === "light"
-      ? {
-          common: {
-            black: "#000",
-            white: "#fff",
-          },
-          primary: {
-            main: "#537FE7",
-            light: "#BBD3FF",
-            dark: "#2947A6",
-            contrastText: "#fff",
-            10: "#0A103D",
-            20: "#152A78",
-            30: "#2947A6",
-            40: "#3C61C6",
-            50: "#537FE7",
-            60: "#7CA2F0",
-            70: "#98BAF7",
-            80: "#BBD3FF",
-            90: "#D8E7FF",
-            95: "#E9F2FF",
-            99: "#F4F9FF"
-          },
-          secondary: {
-            main: "#09AA70",
-            light: "#99F6B9",
-            dark: "#047A67",
-            contrastText: "#fff",
-            10: "#014E51",
-            20: "#02625C",
-            30: "#047A67",
-            40: "#06926D",
-            50: "#09AA70",
-            60: "#3BCC89",
-            70: "#63E59C",
-            80: "#99F6B9",
-            90: "#CBFAD6",
-            95: "#E5FFEB",
-            99: "#F4FFF7"
-          },
-          error: {
-            main: "#D62F3A",
-            contrastText: "#fff",
-            10: "#3F012F",
-            20: "#670043",
-            30: "#9C0057",
-            40: "#BA0055",
-            50: "#D9004E",
-            60: "#E83A67",
-            70: "#F36179",
-            80: "#FB969D",
-            90: "#FFB6BB",
-            95: "#FFD0D3",
-            99: "#FFECEE"
-          },
-          warning: {
-            main: "#ed6c02",
-            contrastText: "#fff",
-            100: "#EF7300",
-            99: "#FFE7D1"
-          },
-          info: {
-            main: "#0288d1",
-            contrastText: "#fff",
-            90: "#29AEE7",
-            80: "#DDF5FF"
-          },
-          success: {
-            main: "#02c076",
-            contrastText: "#fff",
-            60: "#0DAA94",
-            50: "#CDFFE5"
-          },
-          grey: {
-            10: "#101A29",
-            20: "#212E42",
-            30: "#37465C",
-            40: "#526075",
-            50: "#76808F",
-            60: "#979EA8",
-            70: "#B8BCC2",
-            80: "#D5D6D8",
-            90: "#E6E6E6",
-            95: "#F5F5F5",
-            99: "#FBFBFB",
-          },
-          background: {
-            paper: "#ffffff",
-            default: "#f8f8f8",
-            tableOdd: "#f5f5f5",
-          },
-          text: {
-            primary: "#252B3D",
-            secondary: "#6B7280",
-            disabled: "#797979",
-          },
-          divider: "#bdbdbd",
-          tooltip: "#526075",
-          dialog: "#526075",
-        }
-      : {
-          // پالت رنگ برای حالت تاریک
-          common: {
-            black: "#000",
-            white: "#fff",
-          },
-          primary: {
-            main: "#7CA2F0",
-            light: "#BBD3FF",
-            dark: "#2947A6",
-            contrastText: "#fff",
-            10: "#0A103D",
-            20: "#152A78",
-            30: "#2947A6",
-            40: "#3C61C6",
-            50: "#537FE7",
-            60: "#7CA2F0",
-            70: "#98BAF7",
-            80: "#BBD3FF",
-            90: "#D8E7FF",
-            95: "#E9F2FF",
-            99: "#F4F9FF"
-          },
-          secondary: {
-            main: "#09AA70",
-            light: "#99F6B9",
-            dark: "#047A67",
-            contrastText: "#fff",
-            10: "#014E51",
-            20: "#02625C",
-            30: "#047A67",
-            40: "#06926D",
-            50: "#09AA70",
-            60: "#3BCC89",
-            70: "#63E59C",
-            80: "#99F6B9",
-            90: "#CBFAD6",
-            95: "#E5FFEB",
-            99: "#F4FFF7"
-          },
-          error: {
-            main: "#D9004E",
-            contrastText: "#fff",
-            10: "#3F012F",
-            20: "#670043",
-            30: "#9C0057",
-            40: "#BA0055",
-            50: "#D9004E",
-            60: "#E83A67",
-            70: "#F36179",
-            80: "#FB969D",
-            90: "#FFB6BB",
-            95: "#FFD0D3",
-            99: "#FFECEE"
-            
-          },
-          warning: {
-            main: "#ed6c02",
-            contrastText: "#fff",
-            100: "#EF7300",
-            99: "#FFE7D1"
-          },
-          info: {
-            main: "#0288d1",
-            contrastText: "#fff",
-            90: "#29AEE7",
-            80: "#DDF5FF"
-          },
-          success: {
-            main: "#02c076",
-            contrastText: "#fff",
-            60: "#0DAA94",
-            50: "#CDFFE5"
-          },
-          grey: {
-            10: "#000203",
-            20: "#0F141D",
-            30: "#141B27",
-            40: "#162033",
-            50: "#313745",
-            60: "#424A58",
-            70: "#6B7483",
-            80: "#CDD0D4",
-            90: "#E0E0E0",
-            95: "#F5F5F5",
-            99: "#F7F8FA",
-          },
-          background: {
-            paper: "#141B27",
-            default: "#000203",
-            tableOdd: "#1e202e",
-          },
-          text: {
-            primary: "#ffffff",
-            secondary: "#CDD0D4",
-            disabled: "#7a7a7a",
-          },
-          divider: "#424A58",
-          tooltip: "#313745",
-          dialog: "#FFFFFF",
-        }),
-  },
+    palette: {
+        mode,
+        ...(mode === "light"
+            ? {
+                  common: {
+                      black: "#000",
+                      white: "#fff",
+                  },
+                  primary: {
+                      main: "#537FE7",
+                      light: "#BBD3FF",
+                      dark: "#2947A6",
+                      contrastText: "#fff",
+                      10: "#0A103D",
+                      20: "#152A78",
+                      30: "#2947A6",
+                      40: "#3C61C6",
+                      50: "#537FE7",
+                      60: "#7CA2F0",
+                      70: "#98BAF7",
+                      80: "#BBD3FF",
+                      90: "#D8E7FF",
+                      95: "#E9F2FF",
+                      99: "#F4F9FF",
+                  },
+                  secondary: {
+                      main: "#09AA70",
+                      light: "#99F6B9",
+                      dark: "#047A67",
+                      contrastText: "#fff",
+                      10: "#014E51",
+                      20: "#02625C",
+                      30: "#047A67",
+                      40: "#06926D",
+                      50: "#09AA70",
+                      60: "#3BCC89",
+                      70: "#63E59C",
+                      80: "#99F6B9",
+                      90: "#CBFAD6",
+                      95: "#E5FFEB",
+                      99: "#F4FFF7",
+                  },
+                  error: {
+                      main: "#D62F3A",
+                      contrastText: "#fff",
+                      10: "#3F012F",
+                      20: "#670043",
+                      30: "#9C0057",
+                      40: "#BA0055",
+                      50: "#D9004E",
+                      60: "#E83A67",
+                      70: "#F36179",
+                      80: "#FB969D",
+                      90: "#FFB6BB",
+                      95: "#FFD0D3",
+                      99: "#FFECEE",
+                  },
+                  warning: {
+                      main: "#ed6c02",
+                      contrastText: "#fff",
+                      100: "#EF7300",
+                      99: "#FFE7D1",
+                  },
+                  info: {
+                      main: "#0288d1",
+                      contrastText: "#fff",
+                      90: "#29AEE7",
+                      80: "#DDF5FF",
+                  },
+                  success: {
+                      main: "#02c076",
+                      contrastText: "#fff",
+                      60: "#0DAA94",
+                      50: "#CDFFE5",
+                  },
+                  grey: {
+                      10: "#101A29",
+                      20: "#212E42",
+                      30: "#37465C",
+                      40: "#526075",
+                      50: "#76808F",
+                      60: "#979EA8",
+                      70: "#B8BCC2",
+                      80: "#D5D6D8",
+                      90: "#E6E6E6",
+                      95: "#F5F5F5",
+                      99: "#FBFBFB",
+                  },
+                  background: {
+                      paper: "#ffffff",
+                      default: "#f8f8f8",
+                      tableOdd: "#f5f5f5",
+                  },
+                  text: {
+                      primary: "#252B3D",
+                      secondary: "#6B7280",
+                      disabled: "#797979",
+                  },
+                  divider: "#bdbdbd",
+                  tooltip: "#526075",
+                  dialog: "#526075",
+                  listItem: {
+                      background: "#fff",
+                      color: "#101A29",
+                      hover: {
+                          backgroundColor: "#E9F2FF",
+                      },
+                  },
+                  listItemIcon: {
+                      color: "#101A29",
+                  },
+              }
+            : {
+                  // پالت رنگ برای حالت تاریک
+                  common: {
+                      black: "#000",
+                      white: "#fff",
+                  },
+                  primary: {
+                      main: "#7CA2F0",
+                      light: "#BBD3FF",
+                      dark: "#2947A6",
+                      contrastText: "#fff",
+                      10: "#0A103D",
+                      20: "#152A78",
+                      30: "#2947A6",
+                      40: "#3C61C6",
+                      50: "#537FE7",
+                      60: "#7CA2F0",
+                      70: "#98BAF7",
+                      80: "#BBD3FF",
+                      90: "#D8E7FF",
+                      95: "#E9F2FF",
+                      99: "#F4F9FF",
+                  },
+                  secondary: {
+                      main: "#09AA70",
+                      light: "#99F6B9",
+                      dark: "#047A67",
+                      contrastText: "#fff",
+                      10: "#014E51",
+                      20: "#02625C",
+                      30: "#047A67",
+                      40: "#06926D",
+                      50: "#09AA70",
+                      60: "#3BCC89",
+                      70: "#63E59C",
+                      80: "#99F6B9",
+                      90: "#CBFAD6",
+                      95: "#E5FFEB",
+                      99: "#F4FFF7",
+                  },
+                  error: {
+                      main: "#D9004E",
+                      contrastText: "#fff",
+                      10: "#3F012F",
+                      20: "#670043",
+                      30: "#9C0057",
+                      40: "#BA0055",
+                      50: "#D9004E",
+                      60: "#E83A67",
+                      70: "#F36179",
+                      80: "#FB969D",
+                      90: "#FFB6BB",
+                      95: "#FFD0D3",
+                      99: "#FFECEE",
+                  },
+                  warning: {
+                      main: "#ed6c02",
+                      contrastText: "#fff",
+                      100: "#EF7300",
+                      99: "#FFE7D1",
+                  },
+                  info: {
+                      main: "#0288d1",
+                      contrastText: "#fff",
+                      90: "#29AEE7",
+                      80: "#DDF5FF",
+                  },
+                  success: {
+                      main: "#02c076",
+                      contrastText: "#fff",
+                      60: "#0DAA94",
+                      50: "#CDFFE5",
+                  },
+                  grey: {
+                      10: "#000203",
+                      20: "#0F141D",
+                      30: "#141B27",
+                      40: "#162033",
+                      50: "#313745",
+                      60: "#424A58",
+                      70: "#6B7483",
+                      80: "#CDD0D4",
+                      90: "#E0E0E0",
+                      95: "#F5F5F5",
+                      99: "#F7F8FA",
+                  },
+                  background: {
+                      paper: "#141B27",
+                      default: "#000203",
+                      tableOdd: "#1e202e",
+                  },
+                  text: {
+                      primary: "#ffffff",
+                      secondary: "#CDD0D4",
+                      disabled: "#7a7a7a",
+                  },
+                  divider: "#424A58",
+                  tooltip: "#313745",
+                  dialog: "#FFFFFF",
+                  listItem: {
+                      background: "#313745",
+                      color: "#fff",
+                      hover: {
+                          backgroundColor: "#424A58",
+                      },
+                  },
+                  listItemIcon: {
+                      color: "#fff",
+                  },
+              }),
+    },
 });
 
 export default theme;
