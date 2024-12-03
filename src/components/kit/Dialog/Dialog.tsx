@@ -33,7 +33,10 @@ const DialogKit = ({
     setOpen(false);
   };
 
-  const mode = theme.palette.mode ===  "dark" ? theme.palette.common.white : theme.palette.secondary.main;
+  const mode =
+    theme.palette.mode === "dark"
+      ? theme.palette.common.white
+      : theme.palette.secondary.main;
 
   return (
     <Box>
@@ -67,7 +70,7 @@ const DialogKit = ({
         <DialogContent>
           <DialogContentText
             typography={"subtitle1"}
-            color={theme.palette.dialog}
+            color={theme.palette.dialog.color}
             id="alert-dialog-description"
           >
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -84,8 +87,7 @@ const DialogKit = ({
             autoFocus
             fullWidth
             variant={"outlined"}
-            sx={{color: mode, borderColor: mode}}
-            
+            sx={{ color: mode, borderColor: mode }}
           >
             {cancelTitle}
           </Button>

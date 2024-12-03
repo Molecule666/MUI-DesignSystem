@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkProps, PaletteMode, SvgIcon, ThemeOptions } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, color } from "@mui/system";
 // import { CheckedTrueSvg } from "../assets";
 // import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 // import LinkBehavior from "../components/LinkBehavior";
@@ -353,7 +353,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#BBD3FF",
             90: "#D8E7FF",
             95: "#E9F2FF",
-            99: "#F4F9FF"
+            99: "#F4F9FF",
           },
           secondary: {
             main: "#09AA70",
@@ -370,7 +370,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#99F6B9",
             90: "#CBFAD6",
             95: "#E5FFEB",
-            99: "#F4FFF7"
+            99: "#F4FFF7",
           },
           error: {
             main: "#D62F3A",
@@ -385,25 +385,25 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#FB969D",
             90: "#FFB6BB",
             95: "#FFD0D3",
-            99: "#FFECEE"
+            99: "#FFECEE",
           },
           warning: {
             main: "#ed6c02",
             contrastText: "#fff",
             100: "#EF7300",
-            99: "#FFE7D1"
+            99: "#FFE7D1",
           },
           info: {
             main: "#0288d1",
             contrastText: "#fff",
             90: "#29AEE7",
-            80: "#DDF5FF"
+            80: "#DDF5FF",
           },
           success: {
             main: "#02c076",
             contrastText: "#fff",
             60: "#0DAA94",
-            50: "#CDFFE5"
+            50: "#CDFFE5",
           },
           grey: {
             10: "#101A29",
@@ -430,7 +430,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           },
           divider: "#bdbdbd",
           tooltip: "#526075",
-          dialog: "#526075",
+          dialog: { color: "#526075" },
         }
       : {
           // پالت رنگ برای حالت تاریک
@@ -453,7 +453,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#BBD3FF",
             90: "#D8E7FF",
             95: "#E9F2FF",
-            99: "#F4F9FF"
+            99: "#F4F9FF",
           },
           secondary: {
             main: "#09AA70",
@@ -470,7 +470,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#99F6B9",
             90: "#CBFAD6",
             95: "#E5FFEB",
-            99: "#F4FFF7"
+            99: "#F4FFF7",
           },
           error: {
             main: "#D9004E",
@@ -485,26 +485,25 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             80: "#FB969D",
             90: "#FFB6BB",
             95: "#FFD0D3",
-            99: "#FFECEE"
-            
+            99: "#FFECEE",
           },
           warning: {
             main: "#ed6c02",
             contrastText: "#fff",
             100: "#EF7300",
-            99: "#FFE7D1"
+            99: "#FFE7D1",
           },
           info: {
             main: "#0288d1",
             contrastText: "#fff",
             90: "#29AEE7",
-            80: "#DDF5FF"
+            80: "#DDF5FF",
           },
           success: {
             main: "#02c076",
             contrastText: "#fff",
             60: "#0DAA94",
-            50: "#CDFFE5"
+            50: "#CDFFE5",
           },
           grey: {
             10: "#000203",
@@ -531,7 +530,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
           },
           divider: "#424A58",
           tooltip: "#313745",
-          dialog: "#FFFFFF",
+          dialog: { color: "#FFFFFF" },
         }),
   },
 });

@@ -22,10 +22,9 @@ export enum TextFieldEnum {
 interface IOverrideTheme {}
 interface IOverridePalette {
   primary: PaletteColor & Color;
-  dialog: string;
+  dialog: { color: string };
   tooltip: string;
 }
-
 
 // update variants
 interface IOverrideTypographyVariants {
@@ -51,7 +50,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions extends Partial<IOverridePalette> {}
   interface TypographyVariants extends IOverrideTypographyVariants {}
   interface TypographyVariantsOptions extends IOverrideTypographyVariants {}
-  interface PaletteColor  {
+  interface PaletteColor {
     0?: string;
     10?: string;
     20?: string;

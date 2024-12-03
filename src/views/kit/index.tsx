@@ -487,7 +487,7 @@ const KitView = () => {
             <Divider sx={{ my: 2 }} />
             <Box display={"flex"} justifyContent={"space-around"}>
               <Box>
-                <DialogKit title="عنوان دیالوگ" buttonTitle="فونت مشکی " />
+                <DialogKit title="عنوان دیالوگ" buttonTitle="فونت مشکی" />
               </Box>
               <Box>
                 <DialogKit
@@ -858,9 +858,9 @@ const KitView = () => {
                   children: "Tab-2 information",
                 },
                 {
-                    title: "Tab 3",
-                    children: "Tab-3 information",
-                  },
+                  title: "Tab 3",
+                  children: "Tab-3 information",
+                },
               ]}
             />
           </Box>
